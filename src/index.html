@@ -1,59 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WaveMixTV v6</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WaveMixTV</title>
 
-  <!-- ✅ Security Headers (enforced by Cloudflare) -->
-  <meta
-    http-equiv="Content-Security-Policy"
-    content="
-      default-src 'self';
-      script-src 'self' https://static.cloudflareinsights.com;
-      style-src 'self';
-      img-src 'self' data:;
-      connect-src 'self';
-      frame-src 'none';
-      object-src 'none';
-      base-uri 'self';
-      form-action 'self';
-      upgrade-insecure-requests;
-    "
-  />
-  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-  <meta http-equiv="X-Frame-Options" content="DENY" />
-  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
-  <meta http-equiv="Permissions-Policy"
-        content="geolocation=(), microphone=(), camera=(), fullscreen=(self)" />
+    <!-- ✅ Security Headers -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' https://static.cloudflareinsights.com;
+        style-src 'self' 'unsafe-inline';
+        img-src 'self' data:;
+        connect-src 'self';
+        frame-src 'self' https://www.youtube.com https://player.twitch.tv;
+        object-src 'none';
+        base-uri 'self';
+        form-action 'self';
+        upgrade-insecure-requests;
+      "
+    />
 
-  <!-- ✅ Main Styles -->
-  <link rel="stylesheet" href="./css/base.css" />
-  <link rel="stylesheet" href="./tokens/design-tokens.css" />
+    <!-- ✅ Styles (go up one level for style.css) -->
+    <link rel="stylesheet" href="../style.css" />
+  </head>
 
-  <!-- ✅ Cloudflare Web Analytics (privacy-friendly) -->
-  <script
-    defer
-    src="https://static.cloudflareinsights.com/beacon.min.js"
-    data-cf-beacon='{"token": "YOUR-CLOUDFLARE-TOKEN-HERE"}'>
-  </script>
-</head>
+  <body>
+    <!-- ✅ Main App Container -->
+    <div id="app">
+      <header id="main-header">
+        <h1>WaveMixTV</h1>
+      </header>
 
-<body>
-  <header id="site-header">
-    <h1>WaveMixTV v6 — Secure Foundation Build</h1>
-  </header>
+      <!-- These sections will be managed by your JS mode modules -->
+      <main id="content"></main>
+    </div>
 
-  <main>
-    <p>System scaffold ready. Layout and components are modular.</p>
-  </main>
+    <!-- ✅ Main entry script (in same folder) -->
+    <script type="module" src="./index.js"></script>
 
-  <footer>
-    <small>&copy; 2025 WaveMixTV. All rights reserved.</small>
-  </footer>
-
-  <!-- ✅ Core System Loader (no inline scripts) -->
-  <script type="module" src="./components/desktop/index.js"></script>
-
-</body>
+    <!-- ✅ Privacy-friendly Cloudflare Analytics (optional) -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "YOUR-CLOUDFLARE-TOKEN-HERE"}'
+    ></script>
+  </body>
 </html>
