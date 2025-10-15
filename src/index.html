@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WaveMixTV v6</title>
+
+  <!-- ✅ Security Headers (enforced by Cloudflare) -->
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="
+      default-src 'self';
+      script-src 'self' https://static.cloudflareinsights.com;
+      style-src 'self';
+      img-src 'self' data:;
+      connect-src 'self';
+      frame-src 'none';
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self';
+      upgrade-insecure-requests;
+    "
+  />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Permissions-Policy"
+        content="geolocation=(), microphone=(), camera=(), fullscreen=(self)" />
+
+  <!-- ✅ Main Styles -->
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./tokens/design-tokens.css" />
+
+  <!-- ✅ Cloudflare Web Analytics (privacy-friendly) -->
+  <script
+    defer
+    src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "YOUR-CLOUDFLARE-TOKEN-HERE"}'>
+  </script>
+</head>
+
+<body>
+  <header id="site-header">
+    <h1>WaveMixTV v6 — Secure Foundation Build</h1>
+  </header>
+
+  <main>
+    <p>System scaffold ready. Layout and components are modular.</p>
+  </main>
+
+  <footer>
+    <small>&copy; 2025 WaveMixTV. All rights reserved.</small>
+  </footer>
+
+  <!-- ✅ Core System Loader (no inline scripts) -->
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>

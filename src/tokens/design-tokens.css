@@ -1,0 +1,21 @@
+/* WaveMixTV v6 — Design Tokens
+   Central place for reusable colors, spacing, and typography.
+   Update these values once, and they apply everywhere. */
+
+:root {
+  /* Colors */
+  --color-bg: #0e0e10;
+  --color-surface: #18181b;
+  --color-accent: #9146ff;
+  --color-text: #ffffff;
+
+  /* Spacing */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+
+  /* Typography */
+  --font-main: 'Inter', system-ui, sans-serif;
+  --font-size-base: 16px;
+}
